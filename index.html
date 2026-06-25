@@ -45,10 +45,13 @@
                 <a href="#games" class="btn btn-secondary bounce-hover">Speel games</a>
             </div>
         </div>
-        <div class="hero-image-placeholder tilt-effect">
-            <div class="placeholder-content">
-                <span>[ Miranda Image/Video Placeholder ]</span>
-            </div>
+        <div class="hero-image-placeholder tilt-effect" style="background: none; border: none; box-shadow: none;">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mirandadetiktokqueen2026/video/7653497809143893280" data-video-id="7653497809143893280" style="max-width: 605px;min-width: 325px;" >
+                <section>
+                    <a target="_blank" title="@mirandadetiktokqueen2026" href="https://www.tiktok.com/@mirandadetiktokqueen2026?refer=embed">@mirandadetiktokqueen2026</a>
+                </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
         </div>
     </section>
 
@@ -96,81 +99,43 @@
     <!-- Section 5: Games Hub -->
     <section id="games" class="fade-in section-padding alt-bg">
         <h2 class="section-title">Arcade / Games Hub</h2>
-        <p class="section-desc">Bewijs dat je een echte fan bent. Local multiplayer madness!</p>
+        <p class="section-desc">Kies een game! Elke game opent in een nieuw tabblad met een gigantische 3D map. Bereid je voor op chaos.</p>
         
-        <div class="games-container">
+        <div class="cards-container">
             <!-- Game 1: Snake -->
-            <div class="game-card neon-card" id="game-snake">
-                <h3>Multiplayer Snake</h3>
-                <p>P1: WASD | P2: Pijltjes. Bots niet!</p>
-                <div class="game-area">
-                    <canvas id="snakeCanvas" width="400" height="300"></canvas>
-                </div>
-                <div class="game-controls">
-                    <button class="btn btn-small" id="btn-start-snake">Start Snake Battle</button>
-                    <span class="score-display">P1: <span id="snake-p1-score">0</span> | P2: <span id="snake-p2-score">0</span></span>
-                </div>
-            </div>
+            <a href="game-snake.html" target="_blank" class="card neon-card game-link-card">
+                <h3>🐍 3D Neon Snake</h3>
+                <p>Grote map, particle explosies en neon glow. Haal de ultieme highscore!</p>
+                <button class="btn btn-primary w-100 bounce-hover">Speel Snake</button>
+            </a>
 
             <!-- Game 2: Reaction Clicker -->
-            <div class="game-card neon-card" id="game-reaction">
-                <h3>Miranda Reaction Clicker</h3>
-                <p>Wacht op "MIRANDA!". P1: F | P2: J. Eerste tot 5 wint!</p>
-                <div class="game-area reaction-area" id="reaction-display">
-                    <span id="reaction-word">WAIT...</span>
-                </div>
-                <div class="game-controls">
-                    <button class="btn btn-small" id="btn-start-reaction">Start Reaction</button>
-                    <span class="score-display">P1: <span id="reaction-p1-score">0</span> | P2: <span id="reaction-p2-score">0</span></span>
-                </div>
-            </div>
+            <a href="game-reaction.html" target="_blank" class="card neon-card game-link-card">
+                <h3>⚡ Miranda Reflex</h3>
+                <p>Test je reactietijd in milliseconden. Druk op spatie zodra je de Queen ziet.</p>
+                <button class="btn btn-primary w-100 bounce-hover">Test Reflex</button>
+            </a>
 
             <!-- Game 3: Cheerio Catch -->
-            <div class="game-card neon-card" id="game-cheerio">
-                <h3>Cheerio Catch</h3>
-                <p>Vang de cheerio's! Gebruik Linker/Rechter pijltje.</p>
-                <div class="game-area">
-                    <canvas id="cheerioCanvas" width="400" height="300"></canvas>
-                </div>
-                <div class="game-controls">
-                    <button class="btn btn-small" id="btn-start-cheerio">Start Catch</button>
-                    <span class="score-display">Score: <span id="cheerio-score">0</span> | Levens: <span id="cheerio-lives">3</span></span>
-                </div>
-            </div>
+            <a href="game-catch.html" target="_blank" class="card neon-card game-link-card">
+                <h3>🍩 Cheerio Catch 3D</h3>
+                <p>Vang de vallende 3D cheerio's in een grote arena met explosie-effecten.</p>
+                <button class="btn btn-primary w-100 bounce-hover">Speel Catch</button>
+            </a>
 
             <!-- Game 4: Quiz -->
-            <div class="game-card neon-card" id="game-quiz">
-                <h3>Miranda Lore Quiz</h3>
-                <p>Test je kennis van de TikTok Queen.</p>
-                <div class="game-area quiz-area" id="quiz-container">
-                    <div id="quiz-question" class="quiz-question">Klik op start om te beginnen!</div>
-                    <div id="quiz-options" class="quiz-options"></div>
-                </div>
-                <div class="game-controls">
-                    <button class="btn btn-small" id="btn-start-quiz">Start Quiz</button>
-                    <span class="score-display">Score: <span id="quiz-score">0</span></span>
-                </div>
-            </div>
+            <a href="game-quiz.html" target="_blank" class="card neon-card game-link-card">
+                <h3>🧠 Lore Quiz</h3>
+                <p>Hoeveel weet jij écht over Miranda? Test je kennis in de ultieme quiz.</p>
+                <button class="btn btn-primary w-100 bounce-hover">Start Quiz</button>
+            </a>
 
             <!-- Game 5: Button Battle -->
-            <div class="game-card neon-card" id="game-button-battle">
-                <h3>Meme Button Battle</h3>
-                <p>10 seconden mash! P1: A | P2: L.</p>
-                <div class="game-area battle-area">
-                    <div class="battle-player p1">
-                        <h4>Speler 1 (A)</h4>
-                        <div class="battle-score" id="battle-p1-score">0</div>
-                    </div>
-                    <div class="timer-display" id="battle-timer">10.0</div>
-                    <div class="battle-player p2">
-                        <h4>Speler 2 (L)</h4>
-                        <div class="battle-score" id="battle-p2-score">0</div>
-                    </div>
-                </div>
-                <div class="game-controls">
-                    <button class="btn btn-small" id="btn-start-battle">Start Mash Battle</button>
-                </div>
-            </div>
+            <a href="game-battle.html" target="_blank" class="card neon-card game-link-card">
+                <h3>🔥 Meme Mash</h3>
+                <p>Heb jij de snelste vingers? 10 seconden lang rammen op die spatiebalk.</p>
+                <button class="btn btn-primary w-100 bounce-hover">Start Mash</button>
+            </a>
         </div>
     </section>
 

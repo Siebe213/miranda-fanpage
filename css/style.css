@@ -547,3 +547,18 @@ body.light-mode footer { background: #e0e0e0; }
     }
     .glitch-text { font-size: 2.5rem; }
 }
+.game-link-card {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.game-link-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+.game-link-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}

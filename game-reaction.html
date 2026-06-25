@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Miranda Reflex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; background: #000; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+        .back-btn { position: absolute; top: 20px; right: 20px; z-index: 10; }
+        .reflex-container {
+            width: 80%; height: 60%; background: #111; border: 5px solid #333; border-radius: 20px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8); transition: all 0.1s; cursor: pointer; user-select: none;
+        }
+        .reflex-container.ready { background: var(--primary-color); border-color: #fff; box-shadow: 0 0 100px var(--primary-color); }
+        .reflex-container.wrong { background: #ff0000; border-color: #fff; box-shadow: 0 0 100px #ff0000; }
+        .reflex-word { font-size: 5rem; font-family: var(--font-heading); font-weight: bold; text-align: center; }
+        .instructions { margin-top: 2rem; color: #888; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn btn-secondary back-btn">Terug naar Hub</a>
+    
+    <div class="reflex-container" id="reflex-box">
+        <div class="reflex-word" id="reflex-text">Klik hier of druk Spatie om te starten</div>
+    </div>
+    <div class="instructions">Snelste tijd wordt opgeslagen!</div>
+
+    <script src="js/game-reaction.js"></script>
+</body>
+</html>
