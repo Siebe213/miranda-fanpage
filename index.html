@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miranda De TikTok Queen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+
+    <!-- Progress / Legend Meter -->
+    <div id="legend-meter-container">
+        <div id="legend-meter-fill"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-brand">
+            <h1 id="brand-title">Miranda.</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#lore">Lore</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#videowall">Videos</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#leaderboard">Leaderboard</a></li>
+            <li><a href="#fanzone">Fan Zone</a></li>
+            <li><button id="theme-toggle" class="btn-small">🌙/☀️</button></li>
+            <li><button id="chaos-toggle" class="btn-small btn-neon">Chaos Mode</button></li>
+        </ul>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="fade-in">
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="Miranda De TikTok Queen">Miranda De TikTok Queen</h1>
+            <p class="subtitle">De fan-made hub voor Miranda lore, clips, chaos en games.</p>
+            <div class="hero-buttons">
+                <a href="#lore" class="btn btn-primary">Bekijk de lore</a>
+                <a href="#games" class="btn btn-secondary bounce-hover">Speel games</a>
+            </div>
+        </div>
+        <div class="hero-image-placeholder tilt-effect">
+            <div class="placeholder-content">
+                <span>[ Miranda Image/Video Placeholder ]</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Lore -->
+    <section id="lore" class="fade-in section-padding">
+        <h2 class="section-title">Wie is Miranda?</h2>
+        <p class="section-desc">Miranda is de ultieme TikTok-persona en internetfiguur waar fans content, inside jokes en chaotische momenten rond verzamelen.</p>
+        
+        <div class="cards-container">
+            <div class="card neon-card">
+                <h3>TikTok Queen Energy</h3>
+                <p>Hier komt de uitleg waarom Miranda de onbetwiste koningin is.</p>
+                <div class="card-placeholder">[ Image ]</div>
+            </div>
+            <div class="card neon-card">
+                <h3>Miranda Lore</h3>
+                <p>De diepere lagen, theorieën en geschiedenis van de streams.</p>
+                <div class="card-placeholder">[ Image ]</div>
+            </div>
+            <div class="card neon-card">
+                <h3>Fan Favorite Moments</h3>
+                <p>De clips die de community gevormd hebben.</p>
+                <div class="card-placeholder">[ Image ]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Timeline -->
+    <section id="timeline" class="fade-in section-padding alt-bg">
+        <h2 class="section-title">De Evolutie van een Legende</h2>
+        <div class="timeline-container" id="timeline-container">
+            <!-- Timeline items injected via data.js -->
+        </div>
+    </section>
+
+    <!-- Section 4: Video Wall -->
+    <section id="videowall" class="fade-in section-padding">
+        <h2 class="section-title">Video Wall</h2>
+        <p class="section-desc">Klassieke momenten en fan edits.</p>
+        <div class="video-grid" id="video-grid">
+            <!-- Video cards injected via data.js -->
+        </div>
+    </section>
+
+    <!-- Section 5: Games Hub -->
+    <section id="games" class="fade-in section-padding alt-bg">
+        <h2 class="section-title">Arcade / Games Hub</h2>
+        <p class="section-desc">Bewijs dat je een echte fan bent. Local multiplayer madness!</p>
+        
+        <div class="games-container">
+            <!-- Game 1: Snake -->
+            <div class="game-card neon-card" id="game-snake">
+                <h3>Multiplayer Snake</h3>
+                <p>P1: WASD | P2: Pijltjes. Bots niet!</p>
+                <div class="game-area">
+                    <canvas id="snakeCanvas" width="400" height="300"></canvas>
+                </div>
+                <div class="game-controls">
+                    <button class="btn btn-small" id="btn-start-snake">Start Snake Battle</button>
+                    <span class="score-display">P1: <span id="snake-p1-score">0</span> | P2: <span id="snake-p2-score">0</span></span>
+                </div>
+            </div>
+
+            <!-- Game 2: Reaction Clicker -->
+            <div class="game-card neon-card" id="game-reaction">
+                <h3>Miranda Reaction Clicker</h3>
+                <p>Wacht op "MIRANDA!". P1: F | P2: J. Eerste tot 5 wint!</p>
+                <div class="game-area reaction-area" id="reaction-display">
+                    <span id="reaction-word">WAIT...</span>
+                </div>
+                <div class="game-controls">
+                    <button class="btn btn-small" id="btn-start-reaction">Start Reaction</button>
+                    <span class="score-display">P1: <span id="reaction-p1-score">0</span> | P2: <span id="reaction-p2-score">0</span></span>
+                </div>
+            </div>
+
+            <!-- Game 3: Cheerio Catch -->
+            <div class="game-card neon-card" id="game-cheerio">
+                <h3>Cheerio Catch</h3>
+                <p>Vang de cheerio's! Gebruik Linker/Rechter pijltje.</p>
+                <div class="game-area">
+                    <canvas id="cheerioCanvas" width="400" height="300"></canvas>
+                </div>
+                <div class="game-controls">
+                    <button class="btn btn-small" id="btn-start-cheerio">Start Catch</button>
+                    <span class="score-display">Score: <span id="cheerio-score">0</span> | Levens: <span id="cheerio-lives">3</span></span>
+                </div>
+            </div>
+
+            <!-- Game 4: Quiz -->
+            <div class="game-card neon-card" id="game-quiz">
+                <h3>Miranda Lore Quiz</h3>
+                <p>Test je kennis van de TikTok Queen.</p>
+                <div class="game-area quiz-area" id="quiz-container">
+                    <div id="quiz-question" class="quiz-question">Klik op start om te beginnen!</div>
+                    <div id="quiz-options" class="quiz-options"></div>
+                </div>
+                <div class="game-controls">
+                    <button class="btn btn-small" id="btn-start-quiz">Start Quiz</button>
+                    <span class="score-display">Score: <span id="quiz-score">0</span></span>
+                </div>
+            </div>
+
+            <!-- Game 5: Button Battle -->
+            <div class="game-card neon-card" id="game-button-battle">
+                <h3>Meme Button Battle</h3>
+                <p>10 seconden mash! P1: A | P2: L.</p>
+                <div class="game-area battle-area">
+                    <div class="battle-player p1">
+                        <h4>Speler 1 (A)</h4>
+                        <div class="battle-score" id="battle-p1-score">0</div>
+                    </div>
+                    <div class="timer-display" id="battle-timer">10.0</div>
+                    <div class="battle-player p2">
+                        <h4>Speler 2 (L)</h4>
+                        <div class="battle-score" id="battle-p2-score">0</div>
+                    </div>
+                </div>
+                <div class="game-controls">
+                    <button class="btn btn-small" id="btn-start-battle">Start Mash Battle</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Leaderboard -->
+    <section id="leaderboard" class="fade-in section-padding">
+        <h2 class="section-title">Fan Leaderboard</h2>
+        <p class="section-desc">De echte legendes staan hier bovenaan.</p>
+        <div class="leaderboard-table-container">
+            <table class="neon-table" id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Top Score</th>
+                        <th>Speler / Fan</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Injected via JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section 7: Fan Zone -->
+    <section id="fanzone" class="fade-in section-padding alt-bg">
+        <h2 class="section-title">Fan Zone</h2>
+        <p class="section-desc">Laat een berichtje achter. <br><small>(Let op: Alle berichten staan alleen lokaal op jouw apparaat in deze eerste versie.)</small></p>
+        
+        <div class="fanzone-container">
+            <div class="fan-form neon-card">
+                <input type="text" id="fan-name" placeholder="Je fan naam" maxlength="30">
+                <textarea id="fan-message" placeholder="Je bericht aan Miranda of de community..." rows="4"></textarea>
+                <button id="btn-post-message" class="btn btn-primary w-100">Post fan message</button>
+            </div>
+            <div class="fan-messages" id="fan-messages-container">
+                <!-- Messages injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: About -->
+    <section id="about" class="fade-in section-padding">
+        <h2 class="section-title">About This Project</h2>
+        <div class="about-content neon-card">
+            <p>Dit is een <strong>fan-made project</strong>, ontworpen als een interactieve hub voor Miranda's community.</p>
+            <p>Het doel is om later echte clips, screenshots, links en meer lore toe te voegen. Deze site is gebouwd als een stevige basis om in de toekomst uit te breiden. Er worden geen privégegevens gebruikt, enkel publieke of grappige momenten uit de streams en TikToks.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3 class="footer-brand">Miranda Fanpage</h3>
+            <p>Fan-made website — not affiliated with TikTok or Miranda.</p>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#games">Games</a>
+                <a href="#leaderboard">Leaderboard</a>
+                <a href="#fanzone">Fan Zone</a>
+            </div>
+            <p class="copyright">&copy; 2026 Miranda Fan Project</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/games.js"></script>
+</body>
+</html>
